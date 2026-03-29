@@ -1,0 +1,7 @@
+server/.env
+server/node_modules/
+server/uploads/
+server/audio/
+*.wav
+*.webm
+__pycache__/

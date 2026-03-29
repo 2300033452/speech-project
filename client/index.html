@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Translator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Voice Translator</h1>
+
+    <div class="card">
+      <label for="targetLang">Target Language</label>
+      <select id="targetLang">
+        <option value="english">English</option>
+        <option value="telugu">Telugu</option>
+        <option value="hindi">Hindi</option>
+        <option value="spanish">Spanish</option>
+      </select>
+
+      <div class="buttons">
+        <button id="recordStartBtn">Start Recording</button>
+        <button id="recordStopBtn" disabled>Stop Recording</button>
+        <button id="runPipelineBtn" disabled>Run Pipeline</button>
+      </div>
+
+      <p><span class="label">Status:</span> <span id="status">Idle</span></p>
+      <p><span class="label">Detected Language:</span> <span id="detectedLanguage">-</span></p>
+
+      <p><span class="label">Original Text:</span></p>
+      <pre id="originalTextBox"></pre>
+
+      <p><span class="label">Translated Text:</span></p>
+      <pre id="translatedTextBox"></pre>
+
+      <p><span class="label">Generated Audio:</span></p>
+      <audio id="outputAudio" controls></audio>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
